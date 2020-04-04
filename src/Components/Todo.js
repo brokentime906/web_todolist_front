@@ -21,6 +21,7 @@ const Contents = styled.div`
   color: black;
   flex: 1;
   text-decoration: ${(props) => (props.done ? "line-through" : "none")};
+  color: ${(props) => (props.done ? "gray" : "black")};
 `;
 const ToggleDone = gql`
   mutation toggleDone($id: String!) {
@@ -30,6 +31,20 @@ const ToggleDone = gql`
 const deleteTodo = gql`
   mutation deleteTodo($id: String!) {
     deleteTodo(id: $id)
+  }
+`;
+const CheckBox = styled.div`
+  cursor: pointer;
+  /* color: skyblue; */
+  svg {
+    color: ${(props) => (props.done ? "skyblue" : "-internal-root-color")};
+  }
+`;
+
+const DeleteBox = styled.div`
+  cursor: pointer;
+  svg {
+    color: red;
   }
 `;
 const Todo = ({ contents, id, done, onToggle, onRemove }) => {
@@ -62,13 +77,13 @@ const Todo = ({ contents, id, done, onToggle, onRemove }) => {
   };
   return (
     <TodoBlock>
-      <button onClick={onClickToggle}>
+      <CheckBox onClick={onClickToggle} done={done}>
         {done ? <MdCheckBox /> : <MdCheckBoxOutlineBlank />}
-      </button>
+      </CheckBox>
       <Contents done={done}>{contents}</Contents>
-      <button onClick={onClickDelete}>
+      <DeleteBox onClick={onClickDelete}>
         <MdRemoveCircleOutline />
-      </button>
+      </DeleteBox>
     </TodoBlock>
   );
 };
