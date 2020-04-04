@@ -13,7 +13,8 @@ const TodoBlock = styled.div`
   align-items: center;
   background: #f8f9fa;
   width: 350px;
-  margin: 10px 20px 20px 10px;
+  margin-top: 10px;
+
   min-height: 50px;
 `;
 const Contents = styled.div`

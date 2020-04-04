@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const TitleBlock = styled.div`
-  margin-top: 40px;
+  margin-top: 30px;
   color: white;
   background: skyblue;
   font-size: 18px;
