@@ -17,7 +17,7 @@ const TitleBlock = styled.div`
 const Title = () => {
   return (
     <TitleBlock>
-      <div>Todo List</div>
+      <div>Shaerd Todo List</div>
     </TitleBlock>
   );
 };
