@@ -12,7 +12,7 @@ const TodoBlock = styled.div`
   justify-content: center;
   align-items: center;
   background: #f8f9fa;
-  width: 400px;
+  width: 350px;
   margin: 10px 20px 20px 10px;
   min-height: 50px;
 `;

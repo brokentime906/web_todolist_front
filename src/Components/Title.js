@@ -6,7 +6,7 @@ const TitleBlock = styled.div`
   color: white;
   background: skyblue;
   font-size: 18px;
-  width: 400px;
+  width: 350px;
   height: 40px;
   display: flex;
   justify-content: center;

@@ -8,7 +8,7 @@ const InputTodoBlock = styled.div`
   display: flex;
   justify-content: space-between;
   background: #495057;
-  width: 400px;
+  width: 350px;
   height: 40px;
 `;
 const Input = styled.input`
@@ -39,7 +39,7 @@ const InputTodo = ({ setTodos }) => {
     setTodos((prev) => [result.data.createTodo, ...prev]);
     newTodo.setValue("");
   };
-  console.log(newTodo.value);
+  //   console.log(newTodo.value);
   return (
     <InputTodoBlock>
       <Input
